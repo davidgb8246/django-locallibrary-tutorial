@@ -26,7 +26,7 @@ import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', None)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True if os.environ.get('DJANGO_DEBUG', None) else False
+DEBUG = True if os.environ.get('DJANGO_DEBUG', None) else 'False'
 
 # Set hosts to allow any app on Railway and the local testing URL
 ALLOWED_HOSTS = [
