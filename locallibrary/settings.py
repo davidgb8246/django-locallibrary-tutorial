@@ -162,3 +162,11 @@ STORAGES = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+stage = os.getenv("MYPROJECT_STAGE", "development")
+if stage == "production":
+    from .settings_production import *
+elif stage == "development":
+    from .settings_dev import *
+else:
+    raise ValueError("Unknown stage: {stage}")
