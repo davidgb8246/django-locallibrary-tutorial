@@ -1,7 +1,7 @@
 import os
 
 ALLOWED_HOSTS = [ '.vercel.app' ]
-DEBUG = True
+DEBUG = 'False'
 
 DATABASES = {
     "default": {
